@@ -1,1 +1,1 @@
-# Trabajo1
+# En este trabajo, se creo una pagina de ropa de futbol para que la gente pueda adquirir productos. Con un carrito, la ubicacion y un video para mostrar la ropa. Tambien con un formulario para enviar tus datos y quede registrado.
