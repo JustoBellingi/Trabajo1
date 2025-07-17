@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos_.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="scripts.js"></script>
+    <title>Document</title>
+    
+  </head>
+  <body>
+        <form action="https://formspree.io/f/xldbraop" method="POST">
+          <header>
+            <h1>Tienda de ropa deportiva</h1>
+            <nav>
+              <ul class="menu">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="https://media.a24.com/p/f54dbfd073d7c41a35febaf477c5d597/adjuntos/296/imagenes/009/307/0009307183/1200x675/smart/billetera-virtualpng.png" target="_blank">Métodos de pago</a></li>
+                <li><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT53aTisaHKuUEPsxCHzMj4sIPTi6y-b1n3kA&s" target="_blank">Envíos</a></li>
+                <li><a href="#productos">Carrito</a></li>
+                <li>
+                  <a href="https://www.instagram.com/efpcamisetas" target="_blank">
+                    <i class="fa-brands fa-square-instagram"></i> Instagram
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+<div id="carrito-icono" style="position: fixed; top: 20px; right: 20px; cursor: pointer; z-index: 1000; background: #444; color: white; padding: 10px 15px; border-radius: 8px; font-size: 18px; user-select: none;">
+  🛒 Carrito (<span id="cantidad-carrito">0</span>)
+</div>
+<div id="carrito-desplegable" style="display:none; position: fixed; top: 60px; right: 20px; width: 300px; max-height: 400px; overflow-y: auto; background: white; border: 1px solid #ccc; box-shadow: 0 2px 10px rgba(0,0,0,0.3); border-radius: 8px; padding: 15px; z-index: 1000;">
+  <h3>Carrito de compras</h3>
+  <ul id="carrito-list" style="list-style: none; padding-left: 0; max-height: 300px; overflow-y: auto;"></ul>
+  <button id="cerrar-carrito" style="margin-top:10px; padding:5px 10px; cursor:pointer;">Cerrar</button>
+  <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar compra</button>
+</div>
+         
+<main>
+  <h3>
+    Tenemos ropa para hombres y mujeres y gran variedad de talles
+  </h3>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="item">Talle Niños</div>
+    <div class="item">Talle XS</div>
+    <div class="item">Talle S</div>
+    <div class="item">Talle M</div>
+    <div class="item">Talle L</div>
+    <div class="item">Talle XL</div>
+    <div class="item">Talle XXL</div>
+     <div class="item">Talle XXXL</div>
+  </div>
+    <div class="grupo">
+      <label for="metodo_pago">Método de pago:</label>
+      <select id="metodo_pago" name="metodo_pago" required>
+        <option value="">-- Seleccioná una opción --</option>
+        <option value="debito">Tarjeta de débito</option>
+        <option value="credito">Tarjeta de crédito</option>
+        <option value="transferencia">Transferencia bancaria (30% OFF)</option>
+        <option value="efectivo">Efectivo</option>
+      </select>
+    </div>
+    
+      <div class="grupo">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+      </div>
+    
+      <div class="grupo">
+        <label for="telefono">Teléfono:</label>
+        <input type="number" id="telefono" name="numero" required />
+      </div>
+    
+      <div class="grupo">
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required />
+      </div>
+    
+      <div class="grupo">
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" name="calle" required />
+      </div>
+    
+      <div class="grupo">
+        <label for="piso">Piso:</label>
+        <input type="number" id="piso" name="piso" required />
+      </div>
+    
+      <div class="grupo">
+        <label for="codigo_postal">CP:</label>
+        <input type="number" id="codigo_postal" name="codigo_postal" required />
+      </div>
+    
+      <button type="submit">Enviar</button>
+    </form>
+</div>
+</main>
+<footer>
+  <div id="productos" class="galeria">
+    <div id="productos" class="galeria">
+  <div class="item">
+    <img src="img/argentina1986.png" alt="Argentina 1986">
+    <div class="texto">Camiseta Argentina 1986</div>
+    <button onclick="agregarAlCarrito('Camiseta Argentina 1986')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/argentina1994.png" alt="Argentina 1994">
+    <div class="texto">Camiseta Argentina 1994</div>
+    <button onclick="agregarAlCarrito('Camiseta Argentina 1994')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/argentina2006.png" alt="Argentina 2006">
+    <div class="texto">Camiseta Argentina 2006</div>
+    <button onclick="agregarAlCarrito('Camiseta Argentina 2006')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/argentina2024.png" alt="Argentina 2024">
+    <div class="texto">Camiseta Argentina 2024</div>
+    <button onclick="agregarAlCarrito('Camiseta Argentina 2024')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/Camiseta-Boca-Juniors-Adidas-Authentic-Tercer-Uniforme-2425-Hombre.png" alt="Boca 2025">
+    <div class="texto">Camiseta Boca 2025</div>
+    <button onclick="agregarAlCarrito('Camiseta Boca 2025')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/barcelonashort.png" alt="Short Barcelona">
+    <div class="texto">Short Barcelona</div>
+    <button onclick="agregarAlCarrito('Short Barcelona')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/camperonboca.png" alt="Camperón Boca">
+    <div class="texto">Camperón Boca</div>
+    <button onclick="agregarAlCarrito('Camperón Boca')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/camperonriver.png" alt="Camperón River">
+    <div class="texto">Camperón River</div>
+    <button onclick="agregarAlCarrito('Camperón River')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/Camperon-Argentina.png" alt="Camperón Argentina">
+    <div class="texto">Camperón Argentina</div>
+    <button onclick="agregarAlCarrito('Camperón Argentina')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortargetina.png" alt="Short Argentina">
+    <div class="texto">Short Argentina</div>
+    <button onclick="agregarAlCarrito('Short Argentina')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortboca.png" alt="Short Boca">
+    <div class="texto">Short Boca</div>
+    <button onclick="agregarAlCarrito('Short Boca')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortriver.png" alt="Short River">
+    <div class="texto">Short River</div>
+    <button onclick="agregarAlCarrito('Short River')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortHolanda.png" alt="Short Holanda">
+    <div class="texto">Short Holanda</div>
+    <button onclick="agregarAlCarrito('Short Holanda')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortFrancia.jpg" alt="Short Francia">
+    <div class="texto">Short Francia</div>
+    <button onclick="agregarAlCarrito('Short Francia')">Agregar al carrito</button>
+  </div>
+  <div class="item">
+    <img src="img/shortCasla.jpg" alt="Short Casla">
+    <div class="texto">Short Casla</div>
+    <button onclick="agregarAlCarrito('Short Casla')">Agregar al carrito</button>
+  </div>
+</div>
+<div>
+  <label for="buscarProducto">Buscar producto:</label>
+  <input type="text" id="buscarProducto" placeholder="Escribí el nombre exacto" />
+  <button onclick="buscarStock()">Buscar stock</button>
+  <p id="mensajeStock"></p>
+</div>
+
+<h2 style="margin-top: 30px;">Lista de productos</h2>
+<ul id="listaProductos"></ul>
+<ul id="conStock"></ul>
+<ul id="sinStock"></ul>
+
+</table>
+<div class="media-container">
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28956.374351210525!2d-58.45193394880995!3d-34.66710181058883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1746051116030!5m2!1ses-419!2sar"
+      width="200%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="video">
+    <iframe width="200%" height="300" src="https://www.youtube.com/embed/4jImHxgHdMU?si=WJhZ9LzRkkOkaeRE" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+  </footer>
+  <section id="reseñas" style="margin-top: 40px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+  <h2>Reseñas de nuestros clientes</h2>
+  <div class="reseña" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ccc;">
+    <strong>Martin Gimenez</strong> <em style="color: green;">★★★★★</em>
+    <p>Me encantó la calidad de las camisetas y la atención fue excelente y rapida. Muy recomendable.</p>
+  </div>
+  <div class="reseña" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ccc;">
+    <strong>Juan Pérez</strong> <em style="color: green;">★★★★★</em>
+    <p>Rápido el envío y los productos llegaron en perfectas condiciones. Lo recomendo.</p>
+  </div>
+  <div class="reseña" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ccc;">
+    <strong>Ana García</strong> <em style="color: orange;">★★★★☆</em>
+    <p>Buena variedad de talles y precios. Me gustaría más stock en los Productos.</p>
+  </div>
+  <div class="reseña" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ccc;">
+    <strong>Gonzalo Fernandez</strong> <em style="color: orange;">★★★☆☆</em>
+    <p>Buena variedad de talles. Muy caro los productos.</p>
+  </div>
+  <div class="reseña" style="margin-bottom: 15px; padding: 10px; border-bottom: 1px solid #ccc;">
+    <strong>Omar Sosa</strong> <em style="color: green;">★★★★★</em>
+    <p>Me encantó la calidad de las camisetas y los precios son muy acordes. Volvere a comprar. </p>
+  </div>
+</section>
+</body>
+</html>

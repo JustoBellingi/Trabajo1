@@ -1,0 +1,208 @@
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    background-color: #970303;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+}
+
+
+header {
+    width: 100%;
+    background-color: tan;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+h1 {
+    color: white;
+    display: inline-block;
+    padding: 15px;
+    border: 5px solid rgb(4, 4, 80);
+}
+
+
+h2 {
+    color: white;
+    background-color: black;
+    text-align: center
+}
+
+
+h3 {
+    text-align: center;
+    background-color: white;
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+main {
+    flex: 1;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.menu-izquierda {
+    padding: 20px;
+}
+
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 0;
+    text-align: left;
+    color: black;
+    width: 50%;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    align-self: center;
+}
+
+
+img {
+    width: 300px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    place-items: center;
+    background-color: gray;
+    color: black;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.grupo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupo label {
+    width: 120px;
+}
+
+.grupo input {
+    flex: 1;
+    padding: 5px;
+}
+
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 55px;
+}
+
+.galeria img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.map,
+.video {
+    width: 200px;
+    padding: 20px;
+}
+
+#listaProductos {
+  list-style: none; /* quita los puntos */
+  padding-left: 1;  /* quita sangría izquierda */
+  margin-left: 1;
+  font-family: Arial, sans-serif;
+}
+
+#listaProductos li {
+  padding: 6px 0;   /* espacio vertical entre ítems */
+  margin: 0;
+}
+
+#conStock li {  padding-left: 1;  /* quita sangría izquierda */
+  margin-left: 1;
+  font-family: Arial, sans-serif;
+}
+#conStock li {
+  padding: 6px 0;   /* espacio vertical entre ítems */
+  margin: 0;
+}
+#sinStock li {  padding-left: 1;  /* quita sangría izquierda */
+  margin-left: 1;
+  font-family: Arial, sans-serif;
+}
+#sinStock li {
+  padding: 6px 0;   /* espacio vertical entre ítems */
+  margin: 0;
+}
+
+#mensajeStock {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#conStock, #sinStock {
+  display: none;
+}
